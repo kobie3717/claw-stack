@@ -1,0 +1,34 @@
+{
+  "name": "claw-stack",
+  "owner": {
+    "name": "kobie3717",
+    "url": "https://github.com/kobie3717"
+  },
+  "metadata": {
+    "description": "The Claw Stack — Memory → Evaluation → Credential → Access Control for AI agents. One install, full pipeline.",
+    "homepage": "https://github.com/kobie3717/claw-stack",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "ai-iq",
+      "source": {
+        "source": "github",
+        "repo": "kobie3717/ai-iq"
+      },
+      "description": "SQLite-backed long-term memory with tiers (working/episodic/semantic), W3C Verifiable Credentials, drift detection, and wing/room access control. The memory + credential layer of the Claw Stack.",
+      "category": "memory",
+      "tags": ["memory", "sqlite", "credentials", "w3c-vc", "access-control", "fsrs", "claw-stack"]
+    },
+    {
+      "name": "bot-circus",
+      "source": {
+        "source": "github",
+        "repo": "kobie3717/bot-circus"
+      },
+      "description": "Multi-bot Telegram orchestrator with per-bot persona, shared/ringfenced memory, and passport-gated access control. The access-control layer of the Claw Stack.",
+      "category": "multi-agent",
+      "tags": ["telegram", "multi-agent", "orchestrator", "shared-memory", "access-control", "passport", "claw-stack"]
+    }
+  ]
+}
