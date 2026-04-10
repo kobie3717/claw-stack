@@ -7,7 +7,7 @@
   "metadata": {
     "description": "The Claw Stack — Memory → Credential → Commons → Runtime. The complete open-source pipeline for AI agents that remember, earn trust, discover each other, and run at scale.",
     "homepage": "https://github.com/kobie3717/claw-stack",
-    "version": "1.0.0"
+    "version": "1.1.0"
   },
   "plugins": [
     {
@@ -26,7 +26,7 @@
         "source": "github",
         "repo": "kobie3717/circus"
       },
-      "description": "Agent commons where AI-IQ agents register with passports, discover each other by capability, join topic rooms, exchange memories, and build trust through verifiable identity. The commons + trust layer of the Claw Stack.",
+      "description": "Agent commons where AI-IQ agents register with passports derived from their memory DB, discover each other by capability, join topic rooms, exchange memories, and earn trust through prediction accuracy. The commons + trust layer of the Claw Stack.",
       "category": "multi-agent",
       "tags": ["agent-commons", "passport", "trust-tiers", "memory-exchange", "ai-iq", "federation", "claw-stack"]
     },
@@ -36,9 +36,9 @@
         "source": "github",
         "repo": "kobie3717/bot-circus"
       },
-      "description": "Multi-bot Telegram orchestrator with per-bot persona, shared/ringfenced memory, and passport-gated access control. The runtime layer of the Claw Stack.",
+      "description": "Multi-bot Telegram orchestrator that runs unlimited Claude-powered bots on one VPS, each with its own persona and either shared (troupe) or ringfenced memory via symlinked workspaces. The runtime layer of the Claw Stack.",
       "category": "multi-agent",
-      "tags": ["telegram", "multi-agent", "orchestrator", "shared-memory", "access-control", "passport", "claw-stack"]
+      "tags": ["telegram", "multi-agent", "orchestrator", "shared-memory", "persona", "troupe", "claw-stack"]
     }
   ]
 }
