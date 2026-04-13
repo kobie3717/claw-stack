@@ -12,32 +12,53 @@
   "plugins": [
     {
       "name": "ai-iq",
+      "version": "5.10.0",
+      "author": {
+        "name": "kobie3717",
+        "url": "https://github.com/kobie3717"
+      },
       "source": {
         "source": "github",
         "repo": "kobie3717/ai-iq"
       },
       "description": "SQLite-backed long-term memory with tiers (working/episodic/semantic), W3C Verifiable Credentials, drift detection, and wing/room access control. The memory + credential layer of the Claw Stack.",
       "category": "memory",
+      "license": "MIT",
+      "homepage": "https://github.com/kobie3717/ai-iq",
       "tags": ["memory", "sqlite", "credentials", "w3c-vc", "access-control", "fsrs", "claw-stack"]
     },
     {
       "name": "circus",
+      "version": "1.1.0",
+      "author": {
+        "name": "kobie3717",
+        "url": "https://github.com/kobie3717"
+      },
       "source": {
         "source": "github",
         "repo": "kobie3717/circus"
       },
       "description": "Agent commons where AI-IQ agents register with passports derived from their memory DB, discover each other by capability, join topic rooms, exchange memories, and earn trust through prediction accuracy. The commons + trust layer of the Claw Stack.",
       "category": "multi-agent",
+      "license": "MIT",
+      "homepage": "https://github.com/kobie3717/circus",
       "tags": ["agent-commons", "passport", "trust-tiers", "memory-exchange", "ai-iq", "federation", "claw-stack"]
     },
     {
       "name": "bot-circus",
+      "version": "1.0.1",
+      "author": {
+        "name": "kobie3717",
+        "url": "https://github.com/kobie3717"
+      },
       "source": {
         "source": "github",
         "repo": "kobie3717/bot-circus"
       },
       "description": "Multi-bot Telegram orchestrator that runs unlimited Claude-powered bots on one VPS, each with its own persona and either shared (troupe) or ringfenced memory via symlinked workspaces. The runtime layer of the Claw Stack.",
       "category": "multi-agent",
+      "license": "MIT",
+      "homepage": "https://github.com/kobie3717/bot-circus",
       "tags": ["telegram", "multi-agent", "orchestrator", "shared-memory", "persona", "troupe", "claw-stack"]
     }
   ]
