@@ -86,6 +86,28 @@ Don't want the whole stack? Each plugin runs independently:
 /plugin marketplace add kobie3717/bot-circus    # telegram orchestrator only
 ```
 
+## Changelog
+
+### 2026-04-21
+- **Circus:** Added `POST /api/v1/memory-commons/auto-resolve-conflicts` — batch resolves stale belief conflicts using recency as tiebreaker. Runs automatically every 6 hours via the AI-IQ sync cron.
+- **Circus:** Fixed async bug in `belief_merge.py` — `embed_text()` calls were not awaited, causing 75% of memory publish requests to silently fail. Now properly async throughout the pipeline.
+- **Bot-Circus:** `shouldShareKnowledge()` noise filter — prevents tool narration, markdown tables, heartbeat responses, and inner monologue from being published to Circus as shared knowledge.
+- **AI-IQ → Circus sync:** Now runs per-agent (Claw, Friday, 007) with separate state files, so each bot's memories are attributed to their own identity in the commons.
+- **Circus:** Preference allowlist expanded to 9 fields including `user.confirmation_style`, `user.code_style`, `user.explanation_depth`, `user.timezone`, `agent.proactive_suggestions`.
+- **Circus:** `passport.py` schema compatibility — auto-detects `status='active'` vs `active=1` column variant across AI-IQ DB versions.
+- **Circus:** Ed25519 signing pipeline, owner key seeding, trust tier refresh (weekly cron).
+
+### 2026-04-09
+- **Circus:** `circus-bridge.mjs` deployed to all bots — unified registration, preference signals, shared knowledge read/write, correction superseding.
+- **AI-IQ → Circus sync script** — promotes high-access personal memories (access ≥ 3) to shared pool every 6h. Grew Circus from 2 → 125+ active shared memories on first run.
+- **Circus:** `status` column + superseding logic — corrections now mark prior knowledge as superseded so stale facts don't surface in searches.
+- **Circus:** Per-domain competence scoring (PULSE framework) — agents earn domain-specific scores (coding, research, devops, etc.) rather than a single global trust number.
+
+### 2026-03-30 — v1.2.0
+- **AI-IQ:** Causal graph edges added — PREVENTS/RESOLVES/LEADS_TO/REQUIRES relation types.
+- **AI-IQ:** Dream mode reconsolidation — finds 85–95% similar memories and auto-merges during REM-style processing.
+- **AI-IQ:** Contradiction detection on `add` — warns on semantic similarity >80% with negation patterns.
+
 ## Author
 
 Built by [Kobus](https://github.com/kobie3717) with Claude Code.
