@@ -123,3 +123,7 @@ Part of the kobie3717 open-source ecosystem:
 ## License
 
 MIT
+
+### 2026-04-21 (patch 2)
+- **AI-IQ → Circus sync:** Global sync state (`aiiq-sync-state-global.json`) prevents all 3 bots from promoting the same AI-IQ memory IDs. First bot to promote wins; others skip it. Eliminates duplicate Circus entries and cascading conflict-resolver supersessions.
+- **Circus search:** LIKE fallback now splits multi-word queries into OR conditions — `content LIKE '%whatsauction%' OR content LIKE '%deploy%'`. Previously multi-word queries returned 0 results because LIKE needs an exact substring.
